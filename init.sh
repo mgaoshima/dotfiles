@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install vim --with-lua
+brew install macvim --with-cscope --with-lua --HEAD
+brew install git node ack tree nkf lv
+
 # NeoBundle
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
