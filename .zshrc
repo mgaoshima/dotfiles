@@ -79,8 +79,29 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias f="find . -name"
+alias ga="git add -A; git status -s"
+alias gs="git status -s"
+alias reload="source ~/.zshrc"
+
 # --------------------------------------
+# 参考 https://github.com/uupaa/dotfiles/blob/master/.zshrc
+
+# スペルミス補完
+setopt correct
+
+# 補完される前にオリジナルのコマンドまで展開してチェックする
+setopt complete_aliases
+
+# 余分な空白は詰めて登録(空白数違い登録を防ぐ)
+setopt hist_reduce_blanks
 
 # カレントディレクトリ中にサブディレクトリが
 # 見付からなかった場合に cd が検索するディレクトリのリスト
 cdpath=($HOME $HOME/Sites)
+
+# edit and reload resource files: 設定ファイル(zshrc, vimrc)編集用
+alias rr='vi ~/.zshrc ~/.vimrc;rrr'
+function rrr() {
+  source ${HOME}/.zshrc
+}
