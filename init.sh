@@ -21,8 +21,6 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 
-source ~/.zshrc
-
 # :NeoBundleInstall を実行 http://qiita.com/yoan/items/6216646324f68e54809d
 vim +":NeoBundleInstall" +:q
 
