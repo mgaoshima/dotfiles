@@ -1,0 +1,44 @@
+[user]
+	name = Nozomi Oshima
+	email = nozomi.oshima@gmail.com
+[core]
+	editor = vim
+	pager = lv -c
+	excludesfile = ~/.gitignore_global
+	whitespace = cr-at-eol
+[alias]
+	a = add -A
+	b = branch
+	c = commit
+	co = checkout
+	d = diff
+	dc = diff --cached
+	l = log --all --oneline --graph --pretty='%C(auto)%h%d %C(white)%an%Creset %s%Creset'
+	ll = !git --no-pager log --oneline -3
+	nb = checkout -b
+	r = remote -v
+	s = status -sb
+	sl = !git --no-pager shortlog -sne
+	t = tag
+	dump = "!f() { git diff $1 --name-only | cpio -dump $2; }; f"
+[push]
+	default = matching
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
