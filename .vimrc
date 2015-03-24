@@ -66,18 +66,20 @@ imap <C-j> <Esc>
 map <Esc><Esc> <Esc>:noh<CR>
 
 
+"" VimGrep時にcwindowを開く
+autocmd QuickFixCmdPost *grep* cwindow
+
+"" NerdTree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-
-"" 検収ファイル作成用
-nnoremap <Leader>k :%s;\([AMD]\)\t\(.*\);\t/\2\t\1;ge<CR>:%s;\t\(.*\.php\t\);\1\t;ge<CR>:%s;\t\(.*\.html\t\);\1\t;ge<CR>:%s;\tM;\t変更;ge<CR>:%s;\tA;\t新規;ge<CR>:%s;\tD;\t削除;ge<CR>
-
 
 "" emmet-vim
 let g:user_emmet_settings = { 'lang' : 'ja' }
 
 "" vim-markdown
 let g:vim_markdown_folding_disabled=1
+
+"" git-status整形
+nnoremap <Leader>k :%s;\([AMD]\)\t\(.*\);\t/\2\t\1;ge<CR>:%s;\t\(.*\.php\t\);\1\t;ge<CR>:%s;\t\(.*\.html\t\);\1\t;ge<CR>:%s;\tM;\t変更;ge<CR>:%s;\tA;\t新規;ge<CR>:%s;\tD;\t削除;ge<CR>
 
 
 " 文字コードの自動認識
