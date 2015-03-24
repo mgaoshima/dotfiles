@@ -20,6 +20,8 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'vim-scripts/BusyBee'
 NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'mileszs/ack.vim'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
