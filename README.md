@@ -2,6 +2,6 @@ dotfiles
 ===
 
 ```
-$ cd ~/dotfiles
-$ chmod +x init.sh
-$ ./init.sh
+$ curl https://raw.githubusercontent.com/nzmosh/dotfiles/master/init.sh | sh
+```
+

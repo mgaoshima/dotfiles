@@ -1,5 +1,9 @@
 #!/bin/sh
 
+
+# dotfiles
+git clone git@github.com:nzmosh/dotfiles.git ~/dotfiles
+
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install vim --with-lua
@@ -19,3 +23,4 @@ ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 
 # :NeoBundleInstall を実行 http://qiita.com/yoan/items/6216646324f68e54809d
 vim +":NeoBundleInstall" +:q
+
