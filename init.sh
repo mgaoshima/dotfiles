@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# NeoBundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 # Oh My Zsh - https://github.com/robbyrussell/oh-my-zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
