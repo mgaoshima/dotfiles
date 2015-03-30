@@ -83,6 +83,7 @@ alias f="find . -name"
 alias ga="git add -A; git status -s"
 alias gs="git status -s"
 alias reload="source ~/.zshrc"
+alias diffcomp="git diff --exit-code --cached --name-only --diff-filter=ACM -- '*.png' '*.jpg' | imageoptim"
 
 # --------------------------------------
 # 参考 https://github.com/uupaa/dotfiles/blob/master/.zshrc
