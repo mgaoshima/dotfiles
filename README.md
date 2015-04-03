@@ -2,6 +2,6 @@ dotfiles
 ===
 
 ```
-$ curl -L https://raw.githubusercontent.com/nzmosh/dotfiles/master/init.sh | sh
+$ curl -L https://raw.githubusercontent.com/mgaoshima/dotfiles/master/init.sh | sh
 ```
 

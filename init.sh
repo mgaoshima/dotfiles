@@ -2,7 +2,7 @@
 
 
 # dotfiles
-git clone git@github.com:nzmosh/dotfiles.git ~/dotfiles
+git clone git@github.com:mgaoshima/dotfiles.git ~/dotfiles
 
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
