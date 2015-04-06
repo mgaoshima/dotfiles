@@ -86,6 +86,8 @@ alias reload="source ~/.zshrc"
 alias diffcomp="git diff --exit-code --cached --name-only --diff-filter=ACM -- '*.png' '*.jpg' | imageoptim"
 alias tarc="tar zcvf"
 alias tarx="tar zxvf"
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
 
 # --------------------------------------
 # 参考 https://github.com/uupaa/dotfiles/blob/master/.zshrc
