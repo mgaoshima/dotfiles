@@ -10,6 +10,32 @@ brew install vim --with-lua
 brew install macvim --with-cscope --with-lua --HEAD
 brew install git node ack tree nkf lv
 
+brew install caskroom/cask/brew-cask
+brew cask install\
+  adobe-creative-cloud\
+  appcleaner\
+  coteditor\
+  firefox\
+  google-chrome\
+  google-drive\
+  google-japanese-ime\
+  imageoptim\
+  integrity\
+  kaleidoscope\
+  keka\
+  macwinzipper\
+  mamp\
+  miro-video-converter\
+  mou\
+  name-mangler\
+  qlmarkdown\
+  the-unarchiver\
+  transmit\
+  versions\
+  virtualbox
+
+brew cask cleanup
+
 # NeoBundle
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
