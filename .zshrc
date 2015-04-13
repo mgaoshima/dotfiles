@@ -110,3 +110,10 @@ alias rr='vi ~/.zshrc ~/.vimrc;rrr'
 function rrr() {
   source ${HOME}/.zshrc
 }
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# GitHub
+eval "$(hub alias -s)"

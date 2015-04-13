@@ -81,6 +81,11 @@ let g:vim_markdown_folding_disabled=1
 "" git-status整形
 nnoremap <Leader>k :%s;\([AMD]\)\t\(.*\);\t/\2\t\1;ge<CR>:%s;\t\(.*\.php\t\);\1\t;ge<CR>:%s;\t\(.*\.html\t\);\1\t;ge<CR>:%s;\tM;\t変更;ge<CR>:%s;\tA;\t新規;ge<CR>:%s;\tD;\t削除;ge<CR>
 
+"" vim-go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
 
 " 文字コードの自動認識
 if &encoding !=# 'utf-8'

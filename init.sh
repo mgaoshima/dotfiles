@@ -8,7 +8,16 @@ git clone git@github.com:mgaoshima/dotfiles.git ~/dotfiles
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install vim --with-lua
 brew install macvim --with-cscope --with-lua --HEAD
-brew install git node ack tree nkf lv
+brew install\
+  ack\
+  git\
+  go\
+  heroku-toolbelt\
+  hub\
+  lv\
+  nkf\
+  node\
+  tree\
 
 brew install caskroom/cask/brew-cask
 brew cask install\
@@ -32,7 +41,7 @@ brew cask install\
   the-unarchiver\
   transmit\
   versions\
-  virtualbox
+  virtualbox\
 
 brew cask cleanup
 
