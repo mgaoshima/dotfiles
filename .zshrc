@@ -89,6 +89,11 @@ alias tarx="tar zxvf"
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder"
 
+alias chrome="open -a Google\ Chrome"
+alias safari="open -a Safari"
+alias prev="open -a Preview"
+alias cot="open -a CotEditor"
+
 # --------------------------------------
 # 参考 https://github.com/uupaa/dotfiles/blob/master/.zshrc
 
