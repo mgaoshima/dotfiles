@@ -10,7 +10,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
@@ -21,7 +20,6 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'vim-scripts/BusyBee'
 NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'mileszs/ack.vim'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
