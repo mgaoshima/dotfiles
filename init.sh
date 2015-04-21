@@ -56,6 +56,12 @@ brew cask cleanup
 open /opt/homebrew-cask/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
 
 
+# npm
+npm install -g browser-sync
+npm install -g divshot-cli
+npm install -g imageoptim-cli
+
+
 # NeoBundle
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
