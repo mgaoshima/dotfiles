@@ -20,7 +20,7 @@ brew install heroku-toolbelt
 brew install hub
 brew install libpng
 brew install lv
-brew install macvim --override-system-vim --with-cscope --with-lua --HEAD
+brew install macvim --override-system-vim --with-cscope --with-lua --custom-icons && brew linkapps macvim
 brew install mercurial
 brew install nkf
 brew install node
