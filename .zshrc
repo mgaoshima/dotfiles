@@ -122,3 +122,9 @@ export PATH=$PATH:$GOPATH/bin
 
 # GitHub
 eval "$(hub alias -s)"
+
+# boot2docker
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/nozomi/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
