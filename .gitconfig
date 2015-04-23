@@ -1,10 +1,10 @@
 [user]
-	name = Nozomi Oshima
+	name = mgaoshima
 	email = nozomi.oshima@gmail.com
 [core]
 	editor = vim
 	pager = lv -c
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/nozomi/.gitignore_global
 	whitespace = cr-at-eol
 [alias]
 	a = add -A
