@@ -25,6 +25,7 @@ brew install mercurial
 brew install nkf
 brew install node
 #brew install python
+brew install tig
 brew install tree
 brew cask install adobe-creative-cloud
 brew cask install appcleaner
