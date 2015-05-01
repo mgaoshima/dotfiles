@@ -13,7 +13,8 @@
 	co = checkout
 	d = diff
 	dc = diff --cached
-	l = log --all --oneline --graph --pretty='%C(auto)%h%d %C(white)%an%Creset %s%Creset'
+	l  = log --oneline --graph --pretty='%C(auto)%h%d %C(white)%an%Creset %s%Creset'
+	la = log --oneline --graph --pretty='%C(auto)%h%d %C(white)%an%Creset %s%Creset' --all
 	ll = !git --no-pager log --oneline -3
 	nb = checkout -b
 	r = remote -v
@@ -50,3 +51,5 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[ghq]
+	root = ~/Workspace/src

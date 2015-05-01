@@ -110,7 +110,7 @@ setopt hist_reduce_blanks
 
 # カレントディレクトリ中にサブディレクトリが
 # 見付からなかった場合に cd が検索するディレクトリのリスト
-cdpath=($HOME $HOME/Sites)
+cdpath=($HOME)
 
 # edit and reload resource files: 設定ファイル(zshrc, vimrc)編集用
 alias rr='vi ~/.zshrc ~/.vimrc;rrr'
@@ -119,7 +119,7 @@ function rrr() {
 }
 
 # Go
-export GOPATH=$HOME/go
+export GOPATH=$HOME/Workspace
 export PATH=$PATH:$GOPATH/bin
 
 # GitHub
@@ -130,3 +130,14 @@ export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/nozomi/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
+# ghq + peco ... http://qiita.com/strsk/items/9151cef7e68f0746820d
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
