@@ -12,7 +12,7 @@ brew update && brew cask update
 
 brew install ack
 #brew install autoconf
-brew install boot2docker
+#brew install boot2docker
 brew install brew-cask
 brew install git
 brew install go
@@ -27,12 +27,12 @@ brew install node
 #brew install python
 brew install tig
 brew install tree
-brew cask install adobe-creative-cloud
+#brew cask install adobe-creative-cloud
 brew cask install appcleaner
 #brew cask install atom
 brew cask install coteditor
 #brew cask install firefox
-brew cask install google-chrome
+#brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-japanese-ime
 brew cask install imageoptim
@@ -52,10 +52,10 @@ brew cask install virtualbox
 
 
 # npm
-npm install -g browser-sync
-npm install -g divshot-cli
-npm install -g imageoptim-cli
-npm install -g grunt-cli
+#npm install -g browser-sync
+#npm install -g divshot-cli
+#npm install -g imageoptim-cli
+#npm install -g grunt-cli
 
 
 # Oh My Zsh - https://github.com/robbyrussell/oh-my-zsh
@@ -74,5 +74,5 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 vim +":NeoBundleInstall" +:q
 
 # CreativeCloudをインストール
-open /opt/homebrew-cask/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
+#open /opt/homebrew-cask/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
 
