@@ -20,6 +20,7 @@ NeoBundle 'gcavallanti/vim-noscrollbar'
 NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'vim-scripts/BusyBee'
 NeoBundle '29decibel/codeschool-vim-theme'
+NeoBundle 'brendonrapp/smyck-vim'
 NeoBundle 'scrooloose/nerdtree'
 call neobundle#end()
 filetype plugin indent on
@@ -46,9 +47,9 @@ if has('gui_running')
   colorscheme codeschool
   set guioptions=
   set visualbell t_vb=
-  set guifont=Menlo:h14
-  set linespace=3
-  set transparency=2
+  set guifont=Menlo:h12
+  set linespace=2
+  set transparency=3
 endif
 
 
