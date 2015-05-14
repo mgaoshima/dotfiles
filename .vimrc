@@ -47,7 +47,7 @@ if has('gui_running')
   colorscheme codeschool
   set guioptions=
   set visualbell t_vb=
-  set guifont=Menlo:h12
+  set guifont=Menlo:h14
   set linespace=2
   set transparency=3
 endif
