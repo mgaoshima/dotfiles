@@ -9,19 +9,27 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+  \    'build' : {
+  \      'windows' : 'tools\\update-dll-mingw',
+  \      'cygwin' : 'make -f make_cygwin.mak',
+  \      'mac' : 'make -f make_mac.mak',
+  \      'linux' : 'make',
+  \      'unix' : 'gmake',
+  \    },
+  \  }
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'sorah/unite-ghq'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
 NeoBundle 'fatih/vim-go'
-"NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'gcavallanti/vim-noscrollbar'
-"NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'vim-scripts/BusyBee'
 NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'brendonrapp/smyck-vim'
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'altercation/vim-colors-solarized'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -29,13 +37,17 @@ NeoBundleCheck
 
 syntax enable
 colorscheme BusyBee
+hi Normal ctermbg=NONE
+hi NonText ctermbg=NONE
+hi LineNr ctermbg=233
+
 set notitle ttyfast hidden
 set directory=/tmp backupdir=/tmp
 set backspace=indent,eol,start
 set number ruler nowrap
 set wildmenu wildmode=list:longest
 set laststatus=2
-set statusline=b%n\ %f%m%r%=%L\ %y[%{&ff},%{&fenc}]\ %{noscrollbar#statusline(15,'-','#')}
+set statusline=\ %n\ %f%m%y%r%q%=%l/%L(%p%%)\ %{&ff},%{&fenc}\ 
 set cindent autoindent smartindent
 set expandtab smarttab tabstop=2 softtabstop=2 shiftwidth=2 et
 set ignorecase smartcase
@@ -64,19 +76,15 @@ nmap <C-j> 10jzz
 nmap <C-k> 10kzz
 imap <C-j> <Esc>
 map <Esc><Esc> <Esc>:noh<CR>
+nmap <C-]> :Unite -start-insert ghq<CR>
+nmap <C-p> :Unite -start-insert file_rec/async<CR>
 
 
 "" VimGrep時にcwindowを開く
 autocmd QuickFixCmdPost *grep* cwindow
 
-"" NerdTree
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
 "" emmet-vim
 let g:user_emmet_settings = { 'lang' : 'ja' }
-
-"" vim-markdown
-let g:vim_markdown_folding_disabled=1
 
 "" git-status整形
 nnoremap <Leader>k :%s;\([AMD]\)\t\(.*\);\t/\2\t\1;ge<CR>:%s;\t\(.*\.php\t\);\1\t;ge<CR>:%s;\t\(.*\.html\t\);\1\t;ge<CR>:%s;\tM;\t変更;ge<CR>:%s;\tA;\t新規;ge<CR>:%s;\tD;\t削除;ge<CR>
