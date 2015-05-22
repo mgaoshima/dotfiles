@@ -39,6 +39,7 @@ NeoBundleCheck
 syntax enable
 colorscheme BusyBee
 
+
 set notitle ttyfast hidden
 set directory=/tmp backupdir=/tmp
 set backspace=indent,eol,start
