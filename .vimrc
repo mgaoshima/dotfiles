@@ -21,12 +21,17 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'sorah/unite-ghq'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'hail2u/vim-css3-syntax.git'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'vim-scripts/BusyBee'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'goatslacker/mango.vim'
 NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'brendonrapp/smyck-vim'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -37,9 +42,6 @@ NeoBundleCheck
 
 syntax enable
 colorscheme BusyBee
-hi Normal ctermbg=NONE
-hi NonText ctermbg=NONE
-hi LineNr ctermbg=233
 
 set notitle ttyfast hidden
 set directory=/tmp backupdir=/tmp
@@ -47,7 +49,9 @@ set backspace=indent,eol,start
 set number ruler nowrap
 set wildmenu wildmode=list:longest
 set laststatus=2
-set statusline=\ %n\ %f%m%y%r%q%=%l/%L(%p%%)\ %{&ff},%{&fenc}\ 
+set statusline=\ #%n\ %<%f%m%r%q\ \ \ %c,%l%=
+      \%{strlen(&fenc)?&fenc:'empty'}\ %{&ff}\ %{tolower(&ft)}
+      \%{strlen(fugitive#statusline())?join(['\ ',fugitive#statusline()[5:][:-3]],'\ '):''}\ 
 set cindent autoindent smartindent
 set expandtab smarttab tabstop=2 softtabstop=2 shiftwidth=2 et
 set ignorecase smartcase
@@ -56,13 +60,21 @@ set list listchars=tab:▸\
 
 "" gvim
 if has('gui_running')
-  colorscheme codeschool
+  colorscheme jellybeans
   set guioptions=
   set visualbell t_vb=
   set guifont=Menlo:h14
   set linespace=2
-  set transparency=3
+  set transparency=8
 endif
+
+
+hi Normal ctermbg=NONE
+hi NonText ctermbg=NONE
+hi LineNr                            ctermfg=242 ctermbg=NONE guifg=#555555 guibg=NONE
+hi StatusLine   term=NONE cterm=NONE ctermfg=258 ctermbg=234  guifg=#e9e9e9 guibg=#333333 gui=NONE
+hi StatusLineNC term=NONE cterm=NONE ctermfg=246 ctermbg=234  guifg=#777777 guibg=#333333 gui=NONE
+hi VertSplit    term=NONE cterm=NONE ctermfg=242 ctermbg=NONE guifg=#555555 guibg=NONE
 
 
 "" keymap
