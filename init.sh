@@ -12,10 +12,19 @@ function brew_install () {
 
 function brew_cask_install () {
   if [ `brew cask list | grep $1` ]; then
-    echo "Formula already insatlled: ${1}";
+    echo "Cask already insatlled: ${1}";
   else
     echo "Brewing ${*}..."
     brew cask install $*
+  fi
+}
+
+function brew_tap () {
+  if [ `brew tap | grep -x $1` ]; then
+    echo "${1} already tapped";
+  else
+    echo "Tapping ${*}..."
+    brew tap $*
   fi
 }
 
@@ -64,10 +73,10 @@ brew_install hugo
 brew_install libpng
 brew_install lv
 brew_install macvim --override-system-vim --with-cscope --with-lua --custom-icons && brew linkapps macvim
-brew_install motemen/ghq/ghq
+brew_tap motemen/ghq && brew_install ghq
 brew_install nkf
 brew_install node
-brew_install peco/peco/peco
+brew_tap peco/peco && brew_install peco
 brew_install tree
 
 # Cask ~
