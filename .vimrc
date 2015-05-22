@@ -1,7 +1,3 @@
-if $SHELL =~ 'fish'
-  set shell=/bin/bash
-endif
-
 if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -58,6 +54,7 @@ set ignorecase smartcase
 set wrapscan hlsearch incsearch gdefault
 set list listchars=tab:▸\ 
 
+
 "" gvim
 if has('gui_running')
   colorscheme jellybeans
@@ -69,8 +66,8 @@ if has('gui_running')
 endif
 
 
-hi Normal ctermbg=NONE
-hi NonText ctermbg=NONE
+hi Normal                                        ctermbg=NONE
+hi NonText                                       ctermbg=NONE
 hi LineNr                            ctermfg=242 ctermbg=NONE guifg=#555555 guibg=NONE
 hi StatusLine   term=NONE cterm=NONE ctermfg=258 ctermbg=234  guifg=#e9e9e9 guibg=#333333 gui=NONE
 hi StatusLineNC term=NONE cterm=NONE ctermfg=246 ctermbg=234  guifg=#777777 guibg=#333333 gui=NONE
@@ -95,11 +92,10 @@ nmap <C-p> :Unite -start-insert file_rec/async<CR>
 "" VimGrep時にcwindowを開く
 autocmd QuickFixCmdPost *grep* cwindow
 
+
 "" emmet-vim
 let g:user_emmet_settings = { 'lang' : 'ja' }
 
-"" git-status整形
-nnoremap <Leader>k :%s;\([AMD]\)\t\(.*\);\t/\2\t\1;ge<CR>:%s;\t\(.*\.php\t\);\1\t;ge<CR>:%s;\t\(.*\.html\t\);\1\t;ge<CR>:%s;\tM;\t変更;ge<CR>:%s;\tA;\t新規;ge<CR>:%s;\tD;\t削除;ge<CR>
 
 "" vim-go
 let g:go_highlight_functions = 1
