@@ -44,6 +44,13 @@ function gem_install () {
 }
 
 
+# Xcode Command Line Tools
+if [ `which gcc` ]; then
+  echo "Xcode Command Line Tools already installed."
+else
+  xcode-select --install
+fi
+
 # Homebrew
 if [ `which brew` ]; then
   echo "Homebrew already installed."
@@ -92,7 +99,7 @@ brew_cask_install transmit
 brew_cask_install versions
 
 # Cask /
-brew cask install adobe-creative-cloud
+brew_cask_install adobe-creative-cloud
 brew_cask_install google-japanese-ime
 brew_cask_install virtualbox
 
