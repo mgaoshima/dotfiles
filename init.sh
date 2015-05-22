@@ -73,20 +73,26 @@ brew_tap motemen/ghq && brew_install ghq
 
 # Cask ~
 brew_cask_install appcleaner
+brew_cask_install atom
 brew_cask_install coteditor
+brew_cask_install firefox
 brew_cask_install google-chrome
 brew_cask_install google-drive
 brew_cask_install imageoptim
 brew_cask_install integrity
 brew_cask_install kaleidoscope
 brew_cask_install keka
+brew_cask_install gyazo
 brew_cask_install macwinzipper
 brew_cask_install name-mangler
 brew_cask_install qlmarkdown
+brew_cask_install sourcetree
 brew_cask_install the-unarchiver
 brew_cask_install transmit
+brew_cask_install versions
 
 # Cask /
+brew cask install adobe-creative-cloud
 brew_cask_install google-japanese-ime
 brew_cask_install virtualbox
 
