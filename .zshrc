@@ -80,6 +80,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias f="find . -name"
+alias vp="vimpager"
 alias ga="git add -A; git status -s"
 alias gs="git status -s"
 alias reload="source ~/.zshrc"
