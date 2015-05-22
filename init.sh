@@ -19,14 +19,6 @@ function brew_cask_install () {
   fi
 }
 
-function brew_tap () {
-  if [ `brew tap | grep -x $1` ]; then
-    echo "Already tapped: ${1}";
-  else
-    brew tap $*
-  fi
-}
-
 function npm_install () {
   if [ `npm list --depth=0 -g --parseable | grep "${1}$"` ]; then
     echo "Package already installed: ${1}";
@@ -72,11 +64,11 @@ brew_install hugo
 brew_install libpng
 brew_install lv
 brew_install macvim --override-system-vim --with-cscope --with-lua --custom-icons && brew linkapps macvim
+brew_install motemen/ghq/ghq
 brew_install nkf
 brew_install node
-brew_install peco
+brew_install peco/peco/peco
 brew_install tree
-brew_tap motemen/ghq && brew_install ghq
 
 # Cask ~
 brew_cask_install appcleaner
