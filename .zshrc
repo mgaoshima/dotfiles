@@ -142,3 +142,14 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+function peco-finder () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="open ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-finder
+bindkey '^_' peco-finder
