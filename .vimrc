@@ -54,6 +54,7 @@ set expandtab smarttab tabstop=2 softtabstop=2 shiftwidth=2 et
 set ignorecase smartcase
 set wrapscan hlsearch incsearch gdefault
 set list listchars=tab:▸\ 
+set shortmess+=I
 
 
 "" gvim
