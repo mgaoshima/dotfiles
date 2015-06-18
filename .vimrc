@@ -58,12 +58,26 @@ set list listchars=tab:▸\
 
 "" gvim
 if has('gui_running')
-  colorscheme jellybeans
-  set guioptions=
-  set visualbell t_vb=
-  set guifont=Menlo:h14
-  set linespace=2
-  set transparency=8
+  if has('mac')
+    "" Mac
+    colorscheme jellybeans
+    set guioptions=
+    set visualbell t_vb=
+    set guifont=Menlo:h14
+    set linespace=2
+    set transparency=8
+  else
+    if has('unix')
+      "" Unix
+      colorscheme torte
+      set guioptions=
+      set visualbell t_vb=
+      set guifont=Ubuntu\ Mono\ h12
+      set linespace=2
+    else
+      "" Windows
+    endif
+  endif
 endif
 
 
