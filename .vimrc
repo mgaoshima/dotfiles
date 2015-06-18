@@ -31,13 +31,14 @@ NeoBundle 'goatslacker/mango.vim'
 NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'brendonrapp/smyck-vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'miya0001/vim-dict-wordpress'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
 
 syntax enable
-colorscheme BusyBee
+colorscheme jellybeans
 
 
 set notitle ttyfast hidden
