@@ -196,6 +196,6 @@ endif
 hi Normal                                        ctermbg=NONE
 hi NonText                                       ctermbg=NONE
 hi LineNr                            ctermfg=242 ctermbg=NONE guifg=#555555 guibg=NONE
-hi StatusLine   term=NONE cterm=NONE ctermfg=258 ctermbg=234  guifg=#e9e9e9 guibg=#333333 gui=NONE
-hi StatusLineNC term=NONE cterm=NONE ctermfg=246 ctermbg=234  guifg=#777777 guibg=#333333 gui=NONE
+hi StatusLine   term=NONE cterm=NONE ctermfg=258 ctermbg=233  guifg=#e9e9e9 guibg=#333333 gui=NONE
+hi StatusLineNC term=NONE cterm=NONE ctermfg=246 ctermbg=233  guifg=#777777 guibg=#333333 gui=NONE
 hi VertSplit    term=NONE cterm=NONE ctermfg=242 ctermbg=NONE guifg=#555555 guibg=NONE
