@@ -86,11 +86,12 @@ brew_cask_install coteditor
 brew_cask_install firefox
 brew_cask_install google-chrome
 brew_cask_install google-drive
+brew_cask_install gyazo
 brew_cask_install imageoptim
 brew_cask_install integrity
+brew_cask_install iterm2
 brew_cask_install kaleidoscope
 brew_cask_install keka
-brew_cask_install gyazo
 brew_cask_install macwinzipper
 brew_cask_install name-mangler
 brew_cask_install qlmarkdown
