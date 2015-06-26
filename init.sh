@@ -72,7 +72,7 @@ brew_install hub
 brew_install hugo
 brew_install libpng
 brew_install lv
-brew_install vim --override-system-vim --with-cscope --with-lua --custom-icons
+brew_install vim --override-system-vi --with-lua
 brew_install nkf
 brew_install node
 brew_install tree
