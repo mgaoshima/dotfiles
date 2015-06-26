@@ -146,6 +146,7 @@ set ignorecase smartcase
 set wrapscan hlsearch incsearch gdefault
 set list listchars=tab:▸\ 
 set shortmess+=I
+set mouse=a
 
 
 "" keymap
