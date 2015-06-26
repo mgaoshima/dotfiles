@@ -61,7 +61,7 @@ export LANG=ja_JP.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -80,7 +80,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias f="find . -name"
-alias vp="vimpager"
 alias ga="git add -A; git status -s"
 alias gs="git status -s"
 alias reload="source ~/.zshrc"
@@ -94,8 +93,6 @@ alias chrome="open -a Google\ Chrome"
 alias safari="open -a Safari"
 alias prev="open -a Preview"
 alias cot="open -a CotEditor"
-
-alias vim="mvim -v"
 
 # --------------------------------------
 # 参考 https://github.com/uupaa/dotfiles/blob/master/.zshrc

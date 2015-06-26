@@ -13,6 +13,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 
 " helpers
 NeoBundle 'kana/vim-fakeclip.git'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'tpope/vim-fugitive'

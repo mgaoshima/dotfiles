@@ -72,11 +72,10 @@ brew_install hub
 brew_install hugo
 brew_install libpng
 brew_install lv
-brew_install macvim --override-system-vim --with-cscope --with-lua --custom-icons && brew linkapps macvim
+brew_install vim --override-system-vim --with-cscope --with-lua --custom-icons
 brew_install nkf
 brew_install node
 brew_install tree
-brew_install vimpager
 brew_tap motemen/ghq && brew_install ghq
 brew_tap peco/peco && brew_install peco
 
