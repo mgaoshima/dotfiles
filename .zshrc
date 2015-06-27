@@ -94,6 +94,8 @@ alias safari="open -a Safari"
 alias prev="open -a Preview"
 alias cot="open -a CotEditor"
 
+alias mvim="vim"
+
 # --------------------------------------
 # 参考 https://github.com/uupaa/dotfiles/blob/master/.zshrc
 
