@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 
 function brew_install () {
@@ -72,10 +72,11 @@ brew_install hub
 brew_install hugo
 brew_install libpng
 brew_install lv
-brew_install vim --override-system-vi --with-lua
 brew_install nkf
 brew_install node
 brew_install tree
+brew_install vim --override-system-vi --with-lua
+brew_install zsh
 brew_tap motemen/ghq && brew_install ghq
 brew_tap peco/peco && brew_install peco
 
@@ -122,20 +123,33 @@ fi
 
 
 
-# Oh My Zsh - https://github.com/robbyrussell/oh-my-zsh
-if [ -e ~/.oh-my-zsh ]; then
-  echo "oh-my-zsh already installed."
+#  # Oh My Zsh - https://github.com/robbyrussell/oh-my-zsh
+#  if [ -e ~/.oh-my-zsh ]; then
+#    echo "oh-my-zsh already installed."
+#  else
+#    curl -L http://install.ohmyz.sh | sh
+#  fi
+
+
+# Prezto - https://github.com/sorin-ionescu/prezto
+if [ -e ~/.zprezto ]; then
+  echo "Prezto already installed."
 else
-  curl -L http://install.ohmyz.sh | sh
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
 fi
 
 
 # link dotfiles
 echo "Linking dotfiles..."
-ln -sf $(pwd)/.zshrc ~/.zshrc
-ln -sf $(pwd)/.vimrc ~/.vimrc
-ln -sf $(pwd)/.gitconfig ~/.gitconfig
-ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
+ln -sf $(pwd)/zshrc ~/.zshrc
+ln -sf $(pwd)/zpreztorc ~/.zpreztorc
+ln -sf $(pwd)/vimrc ~/.vimrc
+ln -sf $(pwd)/gitconfig ~/.gitconfig
+ln -sf $(pwd)/gitignore_global ~/.gitignore_global
 
 
 
@@ -147,3 +161,6 @@ else
   curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
   vim +":NeoBundleInstall" +:q
 fi
+
+# Restart shell
+exec $SHELL -l
