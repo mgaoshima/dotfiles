@@ -631,9 +631,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>953 110 661 414 0 0 1680 1027 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>636 190 924 485 0 0 1680 1027 </string>
+	<string>477 197 924 485 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>208 118 650 501 0 0 1680 1027 </string>
+	<string>849 331 650 501 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>229 95 1202 805 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -641,6 +641,18 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>AWDS Pane Directory</key>
+			<string></string>
+			<key>AWDS Pane Option</key>
+			<string>Recycle</string>
+			<key>AWDS Tab Directory</key>
+			<string></string>
+			<key>AWDS Tab Option</key>
+			<string>Recycle</string>
+			<key>AWDS Window Directory</key>
+			<string></string>
+			<key>AWDS Window Option</key>
+			<string>No</string>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -856,7 +868,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Advanced</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -1367,7 +1379,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>457107955.256226</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>457107955.25651002</real>
+	<real>457254232.05487001</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1430,7 +1442,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-06-27T14:25:44Z</date>
+	<date>2015-06-29T06:41:50Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
