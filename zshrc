@@ -72,9 +72,9 @@ function update-shell () {
 
 # ghq + peco ... http://qiita.com/strsk/items/9151cef7e68f0746820d
 function peco-src () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  local selected_dir=$(ghq list | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
+    BUFFER="cd $GOPATH/src/${selected_dir}"
     zle accept-line
   fi
   zle clear-screen
@@ -83,9 +83,9 @@ zle -N peco-src
 bindkey '^]' peco-src
 
 function peco-finder () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  local selected_dir=$(ghq list | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
-    BUFFER="open ${selected_dir}"
+    BUFFER="open $GOPATH/src/${selected_dir}"
     zle accept-line
   fi
   zle clear-screen
