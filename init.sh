@@ -67,7 +67,6 @@ brew_install brew-cask
 brew_install git
 brew_install git-lfs
 brew_install go
-brew_install heroku-toolbelt
 brew_install hub
 brew_install hugo
 brew_install libpng
