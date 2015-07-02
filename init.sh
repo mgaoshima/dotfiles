@@ -73,11 +73,11 @@ brew_install libpng
 brew_install lv
 brew_install nkf
 brew_install node
+brew_install peco
 brew_install tree
 brew_install vim --override-system-vi --with-lua
 brew_install zsh
 brew_tap motemen/ghq && brew_install ghq
-brew_tap peco/peco && brew_install peco
 
 # Cask ~
 brew_cask_install appcleaner
