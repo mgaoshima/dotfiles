@@ -120,6 +120,10 @@ if [ `which gem` ]; then
   gem_install jekyll
 fi
 
+# Go packages
+if [ `which go` ]; then
+  go get github.com/b4b4r07/gch
+fi
 
 
 #  # Oh My Zsh - https://github.com/robbyrussell/oh-my-zsh

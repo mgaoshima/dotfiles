@@ -92,3 +92,11 @@ function peco-finder () {
 }
 zle -N peco-finder
 bindkey '^_' peco-finder
+
+
+# 作業中のリポジトリを表示
+wipdir=`gch -l`
+if [ -n "$wipdir" ]; then
+  echo -e "Dirty working trees:"
+  echo "$wipdir"
+fi
