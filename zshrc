@@ -48,7 +48,7 @@ setopt hist_reduce_blanks
 cdpath=($HOME)
 
 # edit and reload resource files: 設定ファイル(zshrc, vimrc)編集用
-alias rr='vi ~/.zshrc ~/.vimrc;rrr'
+alias rr='vi ~/.vimrc ~/.zshrc ~/.zpreztorc;rrr'
 function rrr() {
   source ${HOME}/.zshrc
 }
