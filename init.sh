@@ -148,11 +148,11 @@ fi
 
 # link dotfiles
 echo "Linking dotfiles..."
-ln -sf $(pwd)/zshrc ~/.zshrc
-ln -sf $(pwd)/zpreztorc ~/.zpreztorc
-ln -sf $(pwd)/vimrc ~/.vimrc
-ln -sf $(pwd)/gitconfig ~/.gitconfig
-ln -sf $(pwd)/gitignore_global ~/.gitignore_global
+ln -sf $(pwd)/.zshrc ~/.zshrc
+ln -sf $(pwd)/.zpreztorc ~/.zpreztorc
+ln -sf $(pwd)/.vimrc ~/.vimrc
+ln -sf $(pwd)/.gitconfig ~/.gitconfig
+ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
 
 
 
