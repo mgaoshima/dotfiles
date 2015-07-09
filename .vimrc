@@ -161,6 +161,7 @@ nmap <C-l> :bn<CR>
 map <Esc><Esc> <Esc>:noh<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>g :Agit<CR>
 
 
 "" VimGrep時にcwindowを開く
