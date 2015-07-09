@@ -17,6 +17,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'cohama/agit.vim'
 
 " dictionaries
 NeoBundle 'hail2u/vim-css3-syntax.git'
