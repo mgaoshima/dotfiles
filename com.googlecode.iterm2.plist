@@ -633,7 +633,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>477 197 924 485 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1005 508 650 501 0 0 1680 1027 </string>
+	<string>297 289 954 634 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>229 95 1202 805 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -842,7 +842,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>80</integer>
+			<integer>146</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -1209,7 +1209,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>42</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -1379,7 +1379,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>457107955.256226</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>457432064.59686297</real>
+	<real>458106517.69041598</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1442,7 +1442,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-07-01T07:45:47Z</date>
+	<date>2015-07-09T03:48:28Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1479,6 +1479,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.1.1</string>
 </dict>
