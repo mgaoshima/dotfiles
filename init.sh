@@ -63,6 +63,7 @@ else
 fi
 
 brew_install ack
+brew_install android-platform-tools
 brew_install brew-cask
 brew_install git
 brew_install git-lfs
