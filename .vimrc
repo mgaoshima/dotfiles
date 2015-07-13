@@ -10,6 +10,7 @@ NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'brendonrapp/smyck-vim'
 NeoBundle 'goatslacker/mango.vim'
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'kristijanhusak/vim-hybrid-material'
 
 " helpers
 NeoBundle 'kana/vim-fakeclip.git'
@@ -169,7 +170,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 
 syntax enable
-colorscheme jellybeans
+colorscheme hybrid_material
 
 
 "" gvim
