@@ -14,6 +14,7 @@ NeoBundle 'kristijanhusak/vim-hybrid-material'
 
 " helpers
 NeoBundle 'kana/vim-fakeclip.git'
+NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mgaoshima/editorconfig-vim'
