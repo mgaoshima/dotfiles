@@ -16,7 +16,7 @@ NeoBundle 'kristijanhusak/vim-hybrid-material'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-  set wildignore+=*/node_modules/*
+  let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'tpope/vim-fugitive'
