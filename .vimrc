@@ -18,6 +18,7 @@ NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mattn/vim-maketable'
 NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'cohama/agit.vim'
