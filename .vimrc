@@ -23,6 +23,7 @@ NeoBundle 'mgaoshima/editorconfig-vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'cohama/agit.vim'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'PProvost/vim-markdown-jekyll'
 
 " dictionaries
 NeoBundle 'hail2u/vim-css3-syntax.git'
