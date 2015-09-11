@@ -102,6 +102,9 @@ bindkey '^_' peco-finder
 #  fi
 
 
+# 256color-term
+export TERM=xterm-256color
+
 # Linuxbrew
 if [ -e $HOME/.linuxbrew ]; then
   export PATH="$HOME/.linuxbrew/bin:$PATH"
