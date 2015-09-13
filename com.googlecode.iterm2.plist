@@ -610,9 +610,9 @@
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
 	<key>NSWindow Frame Preferences</key>
-	<string>645 146 605 485 0 0 1920 1057 </string>
+	<string>645 146 924 485 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>252 100 1626 957 0 0 1920 1057 </string>
+	<string>704 211 1178 824 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -633,7 +633,7 @@
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
-			<false/>
+			<true/>
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1356,7 +1356,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>457370659.970043</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>459965059.542656</real>
+	<real>463581902.58026898</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1419,7 +1419,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-07-30T16:04:18Z</date>
+	<date>2015-09-10T12:43:29Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
