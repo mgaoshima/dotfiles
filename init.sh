@@ -83,7 +83,7 @@ brew_tap motemen/ghq && brew_install ghq
 # Cask ~
 brew_cask_install appcleaner
 brew_cask_install atom
-brew_cask_install coteditor
+brew_cask_install coteditor --appDir=/Applications
 brew_cask_install firefox
 brew_cask_install google-chrome
 brew_cask_install google-drive
@@ -98,7 +98,7 @@ brew_cask_install name-mangler
 brew_cask_install qlmarkdown
 brew_cask_install sourcetree
 brew_cask_install the-unarchiver
-brew_cask_install transmit
+#brew_cask_install transmit
 brew_cask_install versions
 
 # Cask /
