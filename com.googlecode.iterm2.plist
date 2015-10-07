@@ -633,7 +633,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>593 315 924 485 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>257 1336 1178 846 -446 1050 1920 1177 </string>
+	<string>208 118 1178 846 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>229 95 1202 805 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -842,7 +842,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>146</integer>
+			<integer>110</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -1209,7 +1209,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>42</integer>
+			<integer>30</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
