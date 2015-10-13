@@ -10,6 +10,7 @@ Plug 'banyan/recognize_charcode.vim'
 "" filer
 Plug 'ctrlpvim/ctrlp.vim'
 "" completion
+Plug 'Shougo/neocomplete.vim'
 "" git
 Plug 'tpope/vim-fugitive'
 "" colorscheme
@@ -21,6 +22,8 @@ Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 "" css
 Plug 'hail2u/vim-css3-syntax'
+"" php
+Plug 'nishigori/vim-php-dictionary'
 call plug#end()
 
 "" colorscheme
@@ -79,3 +82,15 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)|(\.(git|svn|ico|icns|png|jpg|jpeg|DS_Store))$'
+
+"" neocomplete.vim
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
