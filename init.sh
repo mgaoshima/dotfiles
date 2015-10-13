@@ -77,7 +77,7 @@ brew_install node
 brew_install peco
 brew_install tree
 brew_install vim --override-system-vi --with-lua
-brew_install youtube_dl
+brew_install youtube-dl
 brew_install zsh
 brew_tap motemen/ghq && brew_install ghq
 
