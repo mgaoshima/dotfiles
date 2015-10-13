@@ -1,4 +1,5 @@
-call plug#begin() " junegunn/vim-plug
+"" plugins
+call plug#begin() " vim-plug
 Plug 'tpope/vim-sensible'
 Plug 'kana/vim-fakeclip'
 Plug 'editorconfig/editorconfig-vim'
@@ -21,7 +22,6 @@ Plug 'othree/html5.vim'
 "" css
 Plug 'hail2u/vim-css3-syntax'
 call plug#end()
-
 
 "" colorscheme
 colorscheme hybrid_material
