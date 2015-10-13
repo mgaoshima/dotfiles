@@ -158,13 +158,13 @@ ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
 
 
 
-# NeoBundle - http://qiita.com/yoan/items/6216646324f68e54809d
-if [ -e ~/.vim/bundle/neobundle.vim ]; then
-  echo "NeoBundle already installed."
+# vim-plug - https://github.com/junegunn/vim-plug
+if [ -e ~/.vim/autoload/plug.vim ]; then
+  echo "vim-plug already installed."
 else
-  echo "Installing NeoBundle..."
-  curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-  vim +":NeoBundleInstall" +:q
+  echo "Installing vim-plug..."
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 # Restart shell
