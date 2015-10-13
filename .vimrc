@@ -2,7 +2,9 @@ call plug#begin() " junegunn/vim-plug
 Plug 'tpope/vim-sensible'
 Plug 'kana/vim-fakeclip'
 Plug 'editorconfig/editorconfig-vim'
+"" auto paste/nopaste
 Plug 'ConradIrwin/vim-bracketed-paste'
+"" auto-detect fileencoding
 Plug 'banyan/recognize_charcode.vim'
 "" filer
 Plug 'ctrlpvim/ctrlp.vim'
