@@ -113,7 +113,7 @@ if [ `which npm` ]; then
   npm_install divshot-cli -g
   npm_install imageoptim-cli -g
   npm_install grunt-cli -g
-  npm_install -g phplint jshint csslint htmllint
+  npm_install phplint jshint csslint htmllint -g
 fi
 
 # Ruby Gems
