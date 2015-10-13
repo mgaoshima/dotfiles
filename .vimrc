@@ -18,7 +18,6 @@ Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 "" css
 Plug 'hail2u/vim-css3-syntax'
-Plug 'banyan/recognize_charcode.vim'
 call plug#end()
 
 
