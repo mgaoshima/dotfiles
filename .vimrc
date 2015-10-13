@@ -21,7 +21,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 "" css
-Plug 'JulesWang/css.vim'
+Plug 'hail2u/vim-css3-syntax'
 "" php
 Plug 'nishigori/vim-php-dictionary'
 call plug#end()
