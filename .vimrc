@@ -39,6 +39,9 @@ nohlsearch
 set wildmenu
 set wildmode=list:longest
 
+"" mouse
+set mouse=a
+
 "" statusline
 set statusline=\ #%n\ %<%f%m%r%q\ \ \ %c,%l%=
   \%{strlen(&fenc)?&fenc:'empty'}\ %{&ff}\ %{tolower(&ft)}
