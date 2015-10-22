@@ -3,7 +3,7 @@ call plug#begin() " vim-plug
 Plug 'tpope/vim-sensible'
 Plug 'kana/vim-fakeclip'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/syntastic'
+"  Plug 'scrooloose/syntastic'
 "" auto paste/nopaste
 Plug 'ConradIrwin/vim-bracketed-paste'
 "" auto-detect fileencoding
@@ -13,6 +13,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 "" git
 Plug 'tpope/vim-fugitive'
 "" colorscheme
+Plug 'noahfrederick/vim-noctu'
 Plug 'brendonrapp/smyck-vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'nanotech/jellybeans.vim'
@@ -28,7 +29,7 @@ Plug 'dsawardekar/wordpress.vim'
 call plug#end()
 
 "" colorscheme
-colorscheme hybrid_material
+colorscheme noctu
 
 "" swap files
 set directory=/tmp
@@ -95,11 +96,11 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-"" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+""  "" Syntastic
+""  set statusline+=%#warningmsg#
+""  set statusline+=%{SyntasticStatuslineFlag()}
+""  set statusline+=%*
+""  let g:syntastic_always_populate_loc_list = 1
+""  let g:syntastic_auto_loc_list = 1
+""  let g:syntastic_check_on_open = 1
+""  let g:syntastic_check_on_wq = 0
