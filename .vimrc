@@ -48,6 +48,7 @@ set hlsearch
 "" menu
 set wildmenu
 set wildmode=list:longest
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png
 
 "" mouse
 set mouse=a
@@ -87,10 +88,9 @@ nmap n nzz
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_extensions = ['tag', 'quickfix', 'dir', 'line', 'mixed']
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)|(\.(git|svn|ico|icns|png|jpg|jpeg|DS_Store))$'
-let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+let g:ctrlp_working_path_mode = 'rwa'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
+"let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 
 "" phpcomplete.vim
 let g:php_sync_method = 1
