@@ -3,7 +3,6 @@ call plug#begin() " vim-plug
 Plug 'tpope/vim-sensible'
 Plug 'kana/vim-fakeclip'
 Plug 'editorconfig/editorconfig-vim'
-"  Plug 'scrooloose/syntastic'
 "" auto paste/nopaste
 Plug 'ConradIrwin/vim-bracketed-paste'
 "" auto-detect fileencoding
