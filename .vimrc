@@ -22,7 +22,7 @@ Plug 'noahfrederick/vim-noctu'
 Plug 'brendonrapp/smyck-vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 "" html
-Plug 'mattn/emmet-vim', { 'for': [ 'html', 'php' ] }
+Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 "" css
 Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'sass', 'scss' ] }
