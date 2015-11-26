@@ -112,3 +112,7 @@ if [ -e $HOME/.linuxbrew ]; then
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
   export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
