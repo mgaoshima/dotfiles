@@ -116,3 +116,6 @@ fi
 # NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# MySQL
+export PATH=$PATH:/usr/local/mysql/bin
