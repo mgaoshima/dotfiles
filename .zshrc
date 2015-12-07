@@ -113,9 +113,5 @@ if [ -e $HOME/.linuxbrew ]; then
   export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
 
-# NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # MySQL
 export PATH=$PATH:/usr/local/mysql/bin
