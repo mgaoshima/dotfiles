@@ -73,6 +73,7 @@ set shiftwidth=2 expandtab
 "" search
 set ignorecase
 set smartcase
+set gdefault
 nohlsearch
 
 "" keymap
