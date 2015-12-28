@@ -114,17 +114,6 @@ if [ `which go` ]; then
 fi
 
 
-# Prezto - https://github.com/sorin-ionescu/prezto
-if [ -e ~/.zprezto ]; then
-  echo "Prezto already installed."
-else
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
-fi
-
 mkdir -p ~/Workspace/bin
 mkdir -p ~/Workspace/pkg
 mkdir -p ~/Workspace/src
@@ -140,7 +129,16 @@ ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.gitconfig ~/.gitconfig
 ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
 
-
+# Prezto - https://github.com/sorin-ionescu/prezto
+if [ -e ~/.zprezto ]; then
+  echo "Prezto already installed."
+else
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
+fi
 
 # vim-plug - https://github.com/junegunn/vim-plug
 if [ -e ~/.vim/autoload/plug.vim ]; then
