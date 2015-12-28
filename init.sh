@@ -77,12 +77,13 @@ brew_install node
 brew_install peco
 brew_install tree
 brew_install vim --override-system-vi --with-lua
+brew_install wget
 brew_install youtube-dl
 brew_install zsh
-brew_install wget
 brew_tap motemen/ghq && brew_install ghq
 
 # Cask ~
+brew_cask_install adobe-creative-cloud
 brew_cask_install appcleaner
 brew_cask_install imageoptim
 brew_cask_install integrity
