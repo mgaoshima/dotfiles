@@ -150,6 +150,8 @@ mkdir -p ~/Workspace/bin
 mkdir -p ~/Workspace/pkg
 mkdir -p ~/Workspace/src
 
+ghq get -p git@github.com:mgaoshima/dotfiles.git
+
 echo ""
 echo "======================================================================================"
 echo "Download Office Mac 2011..."
