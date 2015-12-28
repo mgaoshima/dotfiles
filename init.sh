@@ -130,7 +130,7 @@ mkdir -p ~/Workspace/pkg
 mkdir -p ~/Workspace/src
 
 ghq get -p git@github.com:mgaoshima/dotfiles.git
-cd $(GOPATH)/github.com/mgaoshima/dotfiles
+cd $GOPATH/src/github.com/mgaoshima/dotfiles
 
 # link dotfiles
 echo "Linking dotfiles..."
