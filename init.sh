@@ -70,7 +70,6 @@ brew_install git
 brew_install git-lfs
 brew_install go
 brew_install hub
-brew_install hugo
 brew_install libpng
 brew_install lv
 brew_install nkf
@@ -80,11 +79,11 @@ brew_install tree
 brew_install vim --override-system-vi --with-lua
 brew_install youtube-dl
 brew_install zsh
+brew_install wget
 brew_tap motemen/ghq && brew_install ghq
 
 # Cask ~
 brew_cask_install appcleaner
-brew_cask_install gyazo
 brew_cask_install imageoptim
 brew_cask_install integrity
 brew_cask_install kaleidoscope
@@ -99,30 +98,19 @@ brew_cask_install versions
 # npm
 if [ `which npm` ]; then
   npm_install browser-sync -g
-  npm_install divshot-cli -g
   npm_install imageoptim-cli -g
   npm_install grunt-cli -g
 fi
 
 # Ruby Gems
 if [ `which gem` ]; then
-  gem_install foreman
   gem_install git-up
-  gem_install jekyll
 fi
 
 # Go packages
 if [ `which go` ]; then
   go get github.com/b4b4r07/gch
 fi
-
-
-#  # Oh My Zsh - https://github.com/robbyrussell/oh-my-zsh
-#  if [ -e ~/.oh-my-zsh ]; then
-#    echo "oh-my-zsh already installed."
-#  else
-#    curl -L http://install.ohmyz.sh | sh
-#  fi
 
 
 # Prezto - https://github.com/sorin-ionescu/prezto
@@ -156,6 +144,17 @@ else
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   vim +":PlugInstall" +:q
 fi
+
+mkdir -p ~/Workspace/bin
+mkdir -p ~/Workspace/pkg
+mkdir -p ~/Workspace/src
+
+echo ""
+echo "======================================================================================"
+echo "Download Office Mac 2011..."
+echo ">>> wget http://officecdn.microsoft.com/pr/MacOffice2011/ja-jp/MicrosoftOffice2011.dmg"
+echo "======================================================================================"
+echo ""
 
 # Restart shell
 exec $SHELL -l
