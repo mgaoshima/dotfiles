@@ -129,8 +129,8 @@ mkdir -p ~/Workspace/bin
 mkdir -p ~/Workspace/pkg
 mkdir -p ~/Workspace/src
 
-ghq get -p git@github.com:mgaoshima/dotfiles.git
-cd $GOPATH/src/github.com/mgaoshima/dotfiles
+git clone git@github.com:mgaoshima/dotfiles.git ~/Workspace/src/github.com/mgaoshima/dotfiles
+cd ~/Workspace/src/github.com/mgaoshima/dotfiles
 
 # link dotfiles
 echo "Linking dotfiles..."
