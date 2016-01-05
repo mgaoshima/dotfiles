@@ -99,8 +99,9 @@ brew_cask_install versions
 # npm
 if [ `which npm` ]; then
   npm_install browser-sync -g
-  npm_install imageoptim-cli -g
   npm_install grunt-cli -g
+  npm_install gulp -g
+  npm_install imageoptim-cli -g
 fi
 
 # Ruby Gems
