@@ -1,102 +1,83 @@
-"" plugins
-call plug#begin() " vim-plug
-Plug 'tpope/vim-sensible'
-Plug 'kana/vim-fakeclip'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'pgdouyon/vim-evanesco'
-Plug 'tpope/vim-sleuth'
-"" auto paste/nopaste
+"" vim-plug
+call plug#begin()
 Plug 'ConradIrwin/vim-bracketed-paste'
-"" auto-detect fileencoding
 Plug 'banyan/recognize_charcode.vim'
-"" filer
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'nixprime/cpsm'
-"" git
-Plug 'tpope/vim-fugitive'
-"" colorscheme
-Plug 'noahfrederick/vim-noctu'
-Plug 'brendonrapp/smyck-vim'
-Plug 'kristijanhusak/vim-hybrid-material'
-"" html
+Plug 'editorconfig/editorconfig-vim'
+Plug 'kana/vim-fakeclip'
 Plug 'mattn/emmet-vim'
-Plug 'othree/html5.vim'
-"" css
-Plug 'hail2u/vim-css3-syntax', { 'for': [ 'css', 'sass', 'scss' ] }
-"" php
-Plug 'nishigori/vim-php-dictionary', { 'for': 'php' }
-Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
-Plug 'dsawardekar/wordpress.vim', { 'for': [ 'php', 'wordpress'] }
+Plug 'nixprime/cpsm'
+Plug 'noahfrederick/vim-noctu'
+Plug 'pgdouyon/vim-evanesco'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
 call plug#end()
 
-"" colorscheme
-colorscheme noctu
-
-"" swap files
-set directory=/tmp
-set backupdir=/tmp
-
-"" settings
-set hidden
-set number
-set nowrap
-set hlsearch
-
-"" menu
-set wildmenu
-set wildmode=list:longest
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png
-
-"" mouse
-set mouse=a
-
-"" statusline
-"" set statusline=\ #%n\ %<%f%m%r%q\ \ \ %c,%l%=
-""   \%{strlen(&fenc)?&fenc:'empty'}\ %{&ff}\ %{tolower(&ft)}
-""   \%{strlen(fugitive#statusline())?join(['\ ',fugitive#statusline()[5:][:-3]],'\ '):''}\ 
-
-"" list
-set list
-set listchars=tab:▸\ 
-highlight SpecialKey ctermfg=236
-
-"" indent
-set expandtab
-set smarttab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2 expandtab
-
-"" search
-set ignorecase
-set smartcase
-set gdefault
+filetype plugin indent on
+syntax enable
 nohlsearch
 
-"" keymap
+colorscheme noctu
+highlight SpecialKey ctermfg=236
+
+"" settings
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set backupdir=/tmp
+set complete-=i
+set directory=/tmp
+set expandtab
+set gdefault
+set hidden
+set history=1000
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set list
+set listchars=tab:▸\ 
+set mouse=a
+set nowrap
+set nrformats-=octal
+set number
+set ruler
+set sessionoptions-=options
+set shiftwidth=2 expandtab
+set smartcase
+set smarttab
+set softtabstop=2
+set tabstop=2
+set ttimeout
+set ttimeoutlen=100
+set viminfo^=!
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png
+set wildmenu
+set wildmode=list:longest
+
+"" Keymap
 let mapleader = "\<Space>"
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
-nmap <Leader>w :w<CR>
 nmap <silent><Esc><Esc> <Esc>:nohlsearch<CR>
+nmap n nzz
 nmap N Nzz
 nmap j gj
 nmap k gk
-nmap n nzz
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
-"let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 
-"" phpcomplete.vim
-let g:php_sync_method = 1
 
-"" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1  " Scratchバッファを自動で消す
 
-"" Status line - https://github.com/noahfrederick/dots/blob/master/vim/vimrc
+"" ============================================================================
+""
+"" Statusline - https://github.com/noahfrederick/dots/blob/master/vim/vimrc
+""
+"" ============================================================================
+
 let &statusline  = '%6*%{exists("*ObsessionStatus")?ObsessionStatus(StatuslineProject(), StatuslineProject() . " (paused)"):""}'
 let &statusline .= '%#StatusLineNC#%{exists("*ObsessionStatus")?ObsessionStatus("", "", StatuslineProject()):StatuslineProject()}'
 let &statusline .= "%* %f"
