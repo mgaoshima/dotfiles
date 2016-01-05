@@ -5,7 +5,6 @@ Plug 'kana/vim-fakeclip'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'pgdouyon/vim-evanesco'
 Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-surround'
 "" auto paste/nopaste
 Plug 'ConradIrwin/vim-bracketed-paste'
 "" auto-detect fileencoding
@@ -15,8 +14,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nixprime/cpsm'
 "" git
 Plug 'tpope/vim-fugitive'
-"" completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 "" colorscheme
 Plug 'noahfrederick/vim-noctu'
 Plug 'brendonrapp/smyck-vim'
