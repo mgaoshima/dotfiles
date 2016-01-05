@@ -49,7 +49,7 @@ set nrformats-=octal
 set number
 set ruler
 set sessionoptions-=options
-set shiftwidth=2 expandtab
+set shiftwidth=2
 set smartcase
 set smarttab
 set softtabstop=2
