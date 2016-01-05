@@ -1,24 +1,30 @@
 "" vim-plug
 call plug#begin()
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'StanAngeloff/php.vim'
 Plug 'banyan/recognize_charcode.vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'digitaltoad/vim-jade'
+Plug 'dsawardekar/wordpress.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kana/vim-fakeclip'
 Plug 'mattn/emmet-vim'
 Plug 'nixprime/cpsm'
 Plug 'noahfrederick/vim-noctu'
+Plug 'othree/html5.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'pgdouyon/vim-evanesco'
+Plug 'shawncplus/phpcomplete.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sleuth'
 call plug#end()
 
 filetype plugin indent on
 syntax enable
-nohlsearch
 
 colorscheme noctu
 highlight SpecialKey ctermfg=236
+nohlsearch
 
 "" settings
 set autoindent
@@ -55,6 +61,13 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png
 set wildmenu
 set wildmode=list:longest
 
+"" Auto Complete - http://io-fia.blogspot.jp/2012/11/vimvimrc.html
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap " . k . " " . k . "<C-N><C-P>"
+endfor
+imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
+
 "" Keymap
 let mapleader = "\<Space>"
 nmap <C-h> :bp<CR>
@@ -64,6 +77,9 @@ nmap n nzz
 nmap N Nzz
 nmap j gj
 nmap k gk
+
+"" javascript-libraries-syntax.vim
+let g:used_javascript_libs = 'jquery,handlebars'
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
