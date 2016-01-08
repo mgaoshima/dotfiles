@@ -27,6 +27,7 @@ highlight SpecialKey ctermfg=236
 nohlsearch
 
 "" settings
+set ambiwidth=single
 set autoindent
 set autoread
 set backspace=indent,eol,start
