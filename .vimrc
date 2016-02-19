@@ -80,6 +80,8 @@ nmap N Nzz
 nmap j gj
 nmap k gk
 
+autocmd BufRead * set ambiwidth=single
+
 "" javascript-libraries-syntax.vim
 let g:used_javascript_libs = 'jquery,handlebars'
 
