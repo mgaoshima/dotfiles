@@ -91,10 +91,16 @@ brew_cask_install kaleidoscope
 brew_cask_install keka
 brew_cask_install macwinzipper
 brew_cask_install name-mangler
+brew_cask_install qlcolorcode
+brew_cask_install qlimagesize
 brew_cask_install qlmarkdown
+brew_cask_install qlstephen
+brew_cask_install quicklook-csv
+brew_cask_install quicklook-json
 brew_cask_install sourcetree
 brew_cask_install the-unarchiver
 brew_cask_install versions
+brew_cask_install webpquicklook
 
 # npm
 if [ `which npm` ]; then
