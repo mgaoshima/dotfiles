@@ -79,6 +79,7 @@ nmap n nzz
 nmap N Nzz
 nmap j gj
 nmap k gk
+nmap <leader>w :w<CR>
 
 autocmd BufRead * set ambiwidth=single
 
