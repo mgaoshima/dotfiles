@@ -9,7 +9,7 @@ Plug 'dsawardekar/wordpress.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kana/vim-fakeclip'
 Plug 'mattn/emmet-vim'
-Plug 'maksimr/vim-jsbeautify'
+Plug 'alpaca-tc/beautify.vim'
 Plug 'nixprime/cpsm'
 Plug 'noahfrederick/vim-noctu'
 Plug 'othree/html5.vim'
@@ -92,6 +92,8 @@ let g:used_javascript_libs = 'jquery,handlebars'
 "let g:ctrlp_working_path_mode = 'rwa'
 "let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+
 
 "" ============================================================================
 ""
