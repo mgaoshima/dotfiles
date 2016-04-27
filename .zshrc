@@ -70,28 +70,17 @@ function update-shell () {
     && git --git-dir=${ZDOTDIR:-$HOME}/.zprezto/.git --work-tree=${ZDOTDIR:-$HOME}/.zprezto submodule update --init --recursive
 }
 
-# ghq + peco ... http://qiita.com/strsk/items/9151cef7e68f0746820d
-function peco-src () {
-  local selected_dir=$(ghq list | peco --query "$LBUFFER")
+# ghq + fzf ... http://qiita.com/strsk/items/9151cef7e68f0746820d
+function fzf-src () {
+  local selected_dir=$(ghq list|fzf --select-1 --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd $GOPATH/src/${selected_dir}"
     zle accept-line
   fi
   zle clear-screen
 }
-zle -N peco-src
-bindkey '^]' peco-src
-
-function peco-finder () {
-  local selected_dir=$(ghq list | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="open $GOPATH/src/${selected_dir}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-finder
-bindkey '^_' peco-finder
+zle -N fzf-src
+bindkey '^]' fzf-src
 
 
 #  # 作業中のリポジトリを表示
