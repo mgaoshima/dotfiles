@@ -53,3 +53,5 @@
 	required = true
 [ghq]
 	root = ~/Workspace/src
+[diff "sqlite3"]
+	textconv = echo .dump|sqlite3
