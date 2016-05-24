@@ -20,8 +20,6 @@
 	r = remote -v
 	s = status -sb
 	sl = !git --no-pager shortlog -sne
-	t = tag
-	dump = "!f() { git diff $1 --name-only | cpio -dump $2; }; f"
 [push]
 	default = matching
 [diff]
@@ -31,27 +29,15 @@
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [merge]
 	tool = Kaleidoscope
 [difftool]
 	prompt = false
 [mergetool]
 	prompt = false
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
 [ghq]
 	root = ~/Workspace/src
-[diff "sqlite3"]
-	textconv = echo .dump|sqlite3
