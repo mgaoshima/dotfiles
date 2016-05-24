@@ -135,6 +135,7 @@ ln -sf $(pwd)/.zpreztorc ~/.zpreztorc
 ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.gitconfig ~/.gitconfig
 ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
+ln -sf $(pwd)/.tmux.conf ~/.tmux.conf
 
 # Prezto - https://github.com/sorin-ionescu/prezto
 if [ -e ~/.zprezto ]; then
