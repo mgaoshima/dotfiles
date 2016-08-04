@@ -62,7 +62,6 @@ set viminfo^=!
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png
 set wildmenu
 set wildmode=list:longest
-set nofixeol
 
 "" Auto Complete - http://io-fia.blogspot.jp/2012/11/vimvimrc.html
 set completeopt=menuone
