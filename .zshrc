@@ -37,6 +37,9 @@ alias safari="open -a Safari"
 alias prev="open -a Preview"
 alias cot="open -a CotEditor"
 
+alias rsync="rsync --exclude-from=$HOME/.rsync/excludes"
+
+alias vi="vim"
 alias mvim="vim"
 
 # スペルミス補完
