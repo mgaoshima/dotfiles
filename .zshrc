@@ -37,7 +37,7 @@ alias safari="open -a Safari"
 alias prev="open -a Preview"
 alias cot="open -a CotEditor"
 
-alias rsync="rsync --exclude-from=$HOME/.rsync/excludes"
+alias rsync="rsync --exclude-from=$HOME/.rsync_excludes"
 
 alias vi="vim"
 alias mvim="vim"
@@ -64,14 +64,6 @@ function rrr() {
 # Go
 export GOPATH=$HOME/Workspace
 export PATH=$PATH:$GOPATH/bin
-
-# GitHub
-eval "$(hub alias -s)"
-
-# boot2docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/nozomi/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
 
 function update-shell () {
   git --git-dir=${ZDOTDIR:-$HOME}/.zprezto/.git --work-tree=${ZDOTDIR:-$HOME}/.zprezto pull \
