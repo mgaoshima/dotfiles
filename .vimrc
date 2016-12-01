@@ -110,8 +110,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 let &statusline  = '%6*%{exists("*ObsessionStatus")?ObsessionStatus(StatuslineProject(), StatuslineProject() . " (paused)"):""}'
 let &statusline .= '%#StatusLineNC#%{exists("*ObsessionStatus")?ObsessionStatus("", "", StatuslineProject()):StatuslineProject()}'
+let &statusline .= "%#StatusLineNC#%{StatuslineGit()}%*"
 let &statusline .= "%* %f"
-let &statusline .= "%#StatusLineNC#%{StatuslineGit()}%* "
 let &statusline .= '%1*%{&modified && !&readonly?"\*":""}%*'
 let &statusline .= '%1*%{&modified && &readonly?"\*":""}%*'
 let &statusline .= '%2*%{&modifiable?"":"\*"}%*'
