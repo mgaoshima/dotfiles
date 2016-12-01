@@ -3,7 +3,7 @@
 	email = nozomi.oshima@gmail.com
 [core]
 	editor = vim
-	pager = lv -c
+	pager = less
 	excludesfile = ~/.gitignore_global
 	whitespace = cr-at-eol
 [alias]

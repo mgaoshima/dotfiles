@@ -77,6 +77,7 @@ brew_install node
 brew_install peco
 brew_install tmux
 brew_install tree
+brew_install htop
 brew_install vim --override-system-vi --with-lua
 brew_install wget
 brew_install youtube-dl
