@@ -2,11 +2,11 @@
 call plug#begin()
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'StanAngeloff/php.vim'
-Plug 'alpaca-tc/beautify.vim'
+"Plug 'alpaca-tc/beautify.vim'
 Plug 'banyan/recognize_charcode.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-jade'
-Plug 'dsawardekar/wordpress.vim'
+"Plug 'dsawardekar/wordpress.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'https://github.com/hail2u/vim-css3-syntax'
 Plug 'kana/vim-fakeclip'
@@ -19,13 +19,20 @@ Plug 'pgdouyon/vim-evanesco'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sleuth'
+Plug 'airblade/vim-gitgutter'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 filetype plugin indent on
 syntax enable
 
-colorscheme noctu
-highlight SpecialKey ctermfg=236
+try
+  colorscheme onedark
+  highlight Normal ctermbg=NONE
+  highlight Statusline ctermbg=NONE
+  highlight SpecialKey ctermfg=236
+catch
+endtry
 nohlsearch
 
 "" settings
