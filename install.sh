@@ -64,18 +64,13 @@ fi
 
 brew_install ack
 brew_install android-platform-tools
-brew_install brew-cask
 brew_install cmake
 brew_install git
-brew_install git-lfs
 brew_install go
-brew_install hub
 brew_install libpng
 brew_install lv
 brew_install nkf
 brew_install node
-brew_install peco
-brew_install tmux
 brew_install tree
 brew_install htop
 brew_install vim --override-system-vi --with-lua
@@ -101,7 +96,6 @@ brew_cask_install quicklook-csv
 brew_cask_install quicklook-json
 brew_cask_install sourcetree
 brew_cask_install the-unarchiver
-brew_cask_install versions
 brew_cask_install webpquicklook
 
 # npm
@@ -123,6 +117,7 @@ if [ `which go` ]; then
 fi
 
 
+mkdir -p ~/.config/fish
 mkdir -p ~/Workspace/bin
 mkdir -p ~/Workspace/pkg
 mkdir -p ~/Workspace/src
@@ -132,23 +127,11 @@ cd ~/Workspace/src/github.com/mgaoshima/dotfiles
 
 # link dotfiles
 echo "Linking dotfiles..."
-ln -sf $(pwd)/.zshrc ~/.zshrc
-ln -sf $(pwd)/.zpreztorc ~/.zpreztorc
-ln -sf $(pwd)/.vimrc ~/.vimrc
-ln -sf $(pwd)/.gitconfig ~/.gitconfig
-ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
-ln -sf $(pwd)/.rsync_excludes ~/.rsync_excludes
-
-# Prezto - https://github.com/sorin-ionescu/prezto
-if [ -e ~/.zprezto ]; then
-  echo "Prezto already installed."
-else
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
-fi
+ln -sf $(pwd)/config.fish ~/.config/fish/config.fish
+ln -sf $(pwd)/vimrc ~/.vimrc
+ln -sf $(pwd)/gitconfig ~/.gitconfig
+ln -sf $(pwd)/gitignore_global ~/.gitignore_global
+ln -sf $(pwd)/rsync_excludes ~/.rsync_excludes
 
 # vim-plug - https://github.com/junegunn/vim-plug
 if [ -e ~/.vim/autoload/plug.vim ]; then
