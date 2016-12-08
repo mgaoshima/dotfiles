@@ -1,26 +1,29 @@
 "" vim-plug
 call plug#begin()
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'StanAngeloff/php.vim'
-"Plug 'alpaca-tc/beautify.vim'
-Plug 'banyan/recognize_charcode.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'digitaltoad/vim-jade'
-"Plug 'dsawardekar/wordpress.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'https://github.com/hail2u/vim-css3-syntax'
-Plug 'kana/vim-fakeclip'
-Plug 'mattn/emmet-vim'
-Plug 'nixprime/cpsm'
-Plug 'noahfrederick/vim-noctu'
-Plug 'othree/html5.vim'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'pgdouyon/vim-evanesco'
-Plug 'shawncplus/phpcomplete.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sleuth'
-Plug 'airblade/vim-gitgutter'
-Plug 'joshdick/onedark.vim'
+
+  " utility ---------------------
+  Plug 'kana/vim-fakeclip'
+  Plug 'ConradIrwin/vim-bracketed-paste'
+  Plug 'banyan/recognize_charcode.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'mattn/emmet-vim'
+  Plug 'pgdouyon/vim-evanesco'
+  Plug 'editorconfig/editorconfig-vim'
+
+  " git -------------------------
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+
+  " syntax ----------------------
+  Plug 'othree/html5.vim'
+  Plug 'hail2u/vim-css3-syntax'
+  Plug 'othree/javascript-libraries-syntax.vim'
+  Plug 'StanAngeloff/php.vim'
+
+  " colorscheme -----------------
+  Plug 'joshdick/onedark.vim'
+  Plug 'noahfrederick/vim-noctu'
+
 call plug#end()
 
 filetype plugin indent on
@@ -33,43 +36,39 @@ try
   highlight SpecialKey ctermfg=236
 catch
 endtry
-nohlsearch
+
 
 "" settings
-set ambiwidth=single
-set autoindent
-set autoread
-set backspace=indent,eol,start
-set backupdir=/tmp
-set complete-=i
-set directory=/tmp
-set expandtab
-set gdefault
+set title
 set hidden
-set history=1000
-set hlsearch
-set ignorecase
-set incsearch
-set laststatus=2
-set list
-set listchars=tab:▸\ 
+set confirm
+set directory=/tmp
+set backupdir=/tmp
+set history=200
 set mouse=a
-set nowrap
-set nrformats-=octal
+set backspace=indent,eol,start
+set ambiwidth=double
 set number
 set ruler
-set sessionoptions-=options
-set shiftwidth=2
+set laststatus=2
+set nowrap
+set ignorecase
 set smartcase
+set gdefault
+set incsearch
+set hlsearch
+set wrapscan
+set nrformats=
+set autoindent
+set smartindent
 set smarttab
-set softtabstop=2
+set expandtab
 set tabstop=2
-set ttimeout
-set ttimeoutlen=100
-set viminfo^=!
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png
-set wildmenu
-set wildmode=list:longest
+set shiftwidth=2
+set list listchars=tab:▸\ 
+set wildmode=list:longest,full
+set wildignore=*/tmp/*,*.so,*.swp,*.bak,*.min.*,*.map,*.jpg,*.png,*.gif
+set pumheight=10
 
 "" Auto Complete - http://io-fia.blogspot.jp/2012/11/vimvimrc.html
 set completeopt=menuone
@@ -78,26 +77,20 @@ for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
 endfor
 imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
+
 "" Keymap
-let mapleader = "\<Space>"
-nmap <C-h> :bp<CR>
-nmap <C-l> :bn<CR>
-nmap <silent><Esc><Esc> <Esc>:nohlsearch<CR>
-nmap n nzz
-nmap N Nzz
-nmap j gj
-nmap k gk
-nmap <leader>w :w<CR>
+noremap <C-h> :bp<CR>
+noremap <C-l> :bn<CR>
+noremap j gj
+noremap k gk
+noremap m %
+noremap  <C-k> <esc>
+noremap! <C-k> <esc>
 
-autocmd BufRead * set ambiwidth=single
-
-"" javascript-libraries-syntax.vim
-let g:used_javascript_libs = 'jquery,handlebars'
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'rwa'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include)|\.(git|hg|svn|DS_Store)$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
 
 
 "" ============================================================================
