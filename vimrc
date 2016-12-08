@@ -95,10 +95,9 @@ autocmd BufRead * set ambiwidth=single
 let g:used_javascript_libs = 'jquery,handlebars'
 
 "" ctrlp.vim
-"let g:ctrlp_show_hidden = 1
-"let g:ctrlp_working_path_mode = 'rwa'
-"let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'rwa'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include)|\.(git|hg|svn|DS_Store)$'
 
 
 "" ============================================================================
