@@ -9,6 +9,7 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'pgdouyon/vim-evanesco'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'scrooloose/nerdtree'
 
   " git -------------------------
   Plug 'tpope/vim-fugitive'
@@ -87,6 +88,8 @@ noremap m %
 noremap  <C-k> <esc>
 noremap! <C-k> <esc>
 
+"" NERDTree
+noremap <C-n> :NERDTreeToggle<CR>
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
