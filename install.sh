@@ -133,6 +133,7 @@ ln -sf $(pwd)/config.fish ~/.config/fish/config.fish
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/gitconfig ~/.gitconfig
 ln -sf $(pwd)/gitignore_global ~/.gitignore_global
+ln -sf $(pwd)/gitattributes_global ~/.gitattributes_global
 ln -sf $(pwd)/rsync_excludes ~/.rsync_excludes
 
 # vim-plug - https://github.com/junegunn/vim-plug

@@ -5,6 +5,7 @@
 	editor = vim
 	pager = less
 	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes_global
 	whitespace = cr-at-eol
 [alias]
 	a = add -A
