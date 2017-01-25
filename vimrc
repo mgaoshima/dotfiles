@@ -48,7 +48,7 @@ set backupdir=/tmp
 set history=200
 set mouse=a
 set backspace=indent,eol,start
-set ambiwidth=double
+set ambiwidth=single
 set number
 set ruler
 set laststatus=2

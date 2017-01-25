@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 
 function brew_install () {
@@ -65,6 +65,7 @@ fi
 brew_install ack
 brew_install android-platform-tools
 brew_install cmake
+brew_install fish
 brew_install git
 brew_install go
 brew_install libpng
@@ -77,7 +78,6 @@ brew_install vim --override-system-vi --with-lua
 brew_install wget
 brew_install youtube-dl
 brew_install translate-shell
-brew_install zsh
 brew_tap motemen/ghq && brew_install ghq
 
 # Cask ~
@@ -98,6 +98,7 @@ brew_cask_install quicklook-json
 brew_cask_install sourcetree
 brew_cask_install the-unarchiver
 brew_cask_install webpquicklook
+brew_tap caskroom/fonts && brew_cask_install font-fira-code
 
 # npm
 if [ `which npm` ]; then
