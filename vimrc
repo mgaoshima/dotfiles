@@ -9,7 +9,7 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'pgdouyon/vim-evanesco'
   Plug 'editorconfig/editorconfig-vim'
-  Plug 'scrooloose/nerdtree'
+  Plug 'cocopon/vaffle.vim'
 
   " git -------------------------
   Plug 'tpope/vim-fugitive'
@@ -24,6 +24,7 @@ call plug#begin()
   " colorscheme -----------------
   Plug 'joshdick/onedark.vim'
   Plug 'noahfrederick/vim-noctu'
+  Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
@@ -31,10 +32,11 @@ filetype plugin indent on
 syntax enable
 
 try
-  colorscheme onedark
-  highlight Normal ctermbg=NONE
-  highlight Statusline ctermbg=NONE
-  highlight SpecialKey ctermfg=236
+  "colorscheme onedark
+  "highlight Normal ctermbg=NONE
+  "highlight Statusline ctermbg=NONE
+  "highlight SpecialKey ctermfg=236
+  colorscheme iceberg
 catch
 endtry
 
@@ -51,6 +53,7 @@ set backspace=indent,eol,start
 set ambiwidth=single
 set number
 set ruler
+set cursorline
 set laststatus=2
 set nowrap
 set ignorecase
