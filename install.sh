@@ -66,19 +66,19 @@ brew_install ack
 brew_install android-platform-tools
 brew_install cmake
 brew_install fish
+brew_install ghq
 brew_install git
 brew_install go
+brew_install htop
 brew_install libpng
 brew_install lv
 brew_install nkf
 brew_install node
+brew_install translate-shell
 brew_install tree
-brew_install htop
-brew_install vim --override-system-vi --with-lua
+brew_install vim --override-system-vi
 brew_install wget
 brew_install youtube-dl
-brew_install translate-shell
-brew_tap motemen/ghq && brew_install ghq
 
 # Cask ~
 brew_cask_install adobe-creative-cloud
