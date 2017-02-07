@@ -21,6 +21,7 @@
 	r = remote -v
 	s = status -sb
 	sl = !git --no-pager shortlog -sne
+	up = pull --rebase --autostash
 [push]
 	default = matching
 [filter "lfs"]
