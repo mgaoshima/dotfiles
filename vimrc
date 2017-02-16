@@ -45,6 +45,7 @@ endtry
 set title
 set hidden
 set confirm
+set nofixeol
 set directory=/tmp
 set backupdir=/tmp
 set history=200
