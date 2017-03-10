@@ -8,7 +8,7 @@ call plug#begin()
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mattn/emmet-vim'
   Plug 'pgdouyon/vim-evanesco'
-  Plug 'editorconfig/editorconfig-vim'
+  ""Plug 'editorconfig/editorconfig-vim'
   Plug 'cocopon/vaffle.vim'
 
   " git -------------------------
