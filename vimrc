@@ -75,6 +75,8 @@ set wildmode=list:longest,full
 set wildignore=*/tmp/*,*.so,*.swp,*.bak,*.min.*,*.map,*.jpg,*.png,*.gif
 set pumheight=10
 
+autocmd BufRead * set ambiwidth=single
+
 "" Auto Complete - http://io-fia.blogspot.jp/2012/11/vimvimrc.html
 set completeopt=menuone
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
