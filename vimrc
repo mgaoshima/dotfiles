@@ -51,7 +51,6 @@ set backupdir=/tmp
 set history=200
 set mouse=a
 set backspace=indent,eol,start
-set ambiwidth=single
 set number
 set ruler
 set cursorline
@@ -70,7 +69,7 @@ set smarttab
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set list listchars=tab:▸\ 
+set list listchars=tab:▸\ "
 set wildmode=list:longest,full
 set wildignore=*/tmp/*,*.so,*.swp,*.bak,*.min.*,*.map,*.jpg,*.png,*.gif
 set pumheight=10
@@ -84,7 +83,6 @@ for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
 endfor
 imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
-
 "" Keymap
 noremap <C-h> :bp<CR>
 noremap <C-l> :bn<CR>
@@ -94,9 +92,6 @@ noremap m %
 noremap  <C-k> <esc>
 noremap! <C-k> <esc>
 
-"" NERDTree
-noremap <C-n> :NERDTreeToggle<CR>
-
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
@@ -104,7 +99,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|
 
 "" ============================================================================
 ""
-"" Statusline - https://github.com/noahfrederick/dots/blob/master/vim/vimrc
+"" Statusline - https://github.com/noahfrederick/dots/blob/master/vim/vimrc#L195-L263
 ""
 "" ============================================================================
 
