@@ -2,18 +2,24 @@
 	name = Nozomi Oshima
 	email = nozomi.oshima@gmail.com
 [core]
-	editor = vim
-	pager = less
+	pager = less -R
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	whitespace = cr-at-eol
+	precomposeunicode = true
+	quotepath = false
+	editor = vim -c \"set fenc=utf-8\"
+[color]
+	ui = true
 [alias]
 	a = add -A
 	b = branch
 	c = commit
 	co = checkout
 	d = diff
+	dk = difftool -y
 	dc = diff --cached
+	dck = difftool --cached -y
 	l  = log --oneline --graph --pretty='%C(auto)%h%d %C(white)%an%Creset %s%Creset'
 	la = log --oneline --graph --pretty='%C(auto)%h%d %C(white)%an%Creset %s%Creset' --all
 	ll = !git --no-pager log --oneline -3
@@ -23,10 +29,19 @@
 	sl = !git --no-pager shortlog -sne
 	up = pull --rebase --autostash
 [push]
-	default = matching
+	default = simple
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
 [ghq]
 	root = ~/Workspace/src
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true

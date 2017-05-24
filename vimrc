@@ -26,6 +26,9 @@ call plug#begin()
   Plug 'noahfrederick/vim-noctu'
   Plug 'cocopon/iceberg.vim'
 
+  " lint ------------------------
+  Plug 'w0rp/ale'
+
 call plug#end()
 
 filetype plugin indent on
@@ -89,13 +92,17 @@ noremap <C-l> :bn<CR>
 noremap j gj
 noremap k gk
 noremap m %
-noremap  <C-k> <esc>
-noremap! <C-k> <esc>
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
 
+"" ale.vim
+let g:ale_linters = {
+      \   'html': [],
+      \}
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "" ============================================================================
 ""

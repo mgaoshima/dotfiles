@@ -3,7 +3,7 @@ alias gs="git status -s"
 alias ga="git add -A; gs"
 alias tarc="tar zcvf"
 alias tarx="tar zxvf"
-alias rsync="rsync --exclude-from=$HOME/.rsync_excludes"
+alias rsync="rsync -zh --exclude-from=$HOME/.rsync_excludes"
 alias diffcomp="git diff --exit-code --cached --name-only --diff-filter=ACM -- '*.png' '*.jpg' | imageoptim"
 
 # Golang
