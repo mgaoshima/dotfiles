@@ -10,6 +10,8 @@ alias diffcomp="git diff --exit-code --cached --name-only --diff-filter=ACM -- '
 set -x GOPATH $HOME/Workspace
 set -x PATH $PATH $GOPATH/bin
 
+set PATH $PATH $HOME/.nodebrew/current/bin
+
 # ghq + fzf ... http://qiita.com/unlovingly/items/99999271df7eea7bc953
 function fzf_select_repository
   ghq list -p | fzf | read repo
