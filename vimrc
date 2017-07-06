@@ -8,7 +8,7 @@ call plug#begin()
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mattn/emmet-vim'
   Plug 'pgdouyon/vim-evanesco'
-  ""Plug 'editorconfig/editorconfig-vim'
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'cocopon/vaffle.vim'
 
   " git -------------------------
@@ -19,7 +19,12 @@ call plug#begin()
   Plug 'othree/html5.vim'
   Plug 'hail2u/vim-css3-syntax'
   Plug 'othree/javascript-libraries-syntax.vim'
+  Plug 'jason0x43/vim-js-indent'
+  Plug 'leafgarland/typescript-vim'
+    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+    Plug 'Quramy/tsuquyomi'
   Plug 'StanAngeloff/php.vim'
+  Plug 'digitaltoad/vim-pug'
 
   " colorscheme -----------------
   Plug 'joshdick/onedark.vim'
