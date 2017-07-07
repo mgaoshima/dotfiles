@@ -18,13 +18,18 @@ call plug#begin()
   " syntax ----------------------
   Plug 'othree/html5.vim'
   Plug 'hail2u/vim-css3-syntax'
-  Plug 'othree/javascript-libraries-syntax.vim'
   Plug 'jason0x43/vim-js-indent'
   Plug 'leafgarland/typescript-vim'
     Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'Quramy/tsuquyomi'
   Plug 'StanAngeloff/php.vim'
   Plug 'digitaltoad/vim-pug'
+  Plug 'othree/yajs.vim'
+  Plug 'othree/javascript-libraries-syntax.vim'
+    let g:used_javascript_libs = 'jquery,underscore,backbone,react,handlebars,vue'
+  Plug 'othree/es.next.syntax.vim'
+  Plug 'maxmellon/vim-jsx-pretty'
+    let g:vim_jsx_pretty_colorful_config = 1
 
   " colorscheme -----------------
   Plug 'joshdick/onedark.vim'
