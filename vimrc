@@ -19,39 +19,18 @@ call plug#begin()
   Plug 'othree/html5.vim'
   Plug 'hail2u/vim-css3-syntax'
   Plug 'jason0x43/vim-js-indent'
-  Plug 'leafgarland/typescript-vim'
-    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-    Plug 'Quramy/tsuquyomi'
   Plug 'StanAngeloff/php.vim'
   Plug 'digitaltoad/vim-pug'
-  Plug 'othree/yajs.vim'
-  Plug 'othree/javascript-libraries-syntax.vim'
-    let g:used_javascript_libs = 'jquery,underscore,backbone,react,handlebars,vue'
-  Plug 'othree/es.next.syntax.vim'
-  Plug 'maxmellon/vim-jsx-pretty'
-    let g:vim_jsx_pretty_colorful_config = 1
 
   " colorscheme -----------------
-  Plug 'joshdick/onedark.vim'
-  Plug 'noahfrederick/vim-noctu'
   Plug 'cocopon/iceberg.vim'
-
-  " lint ------------------------
-  Plug 'w0rp/ale'
 
 call plug#end()
 
 filetype plugin indent on
 syntax enable
 
-try
-  "colorscheme onedark
-  "highlight Normal ctermbg=NONE
-  "highlight Statusline ctermbg=NONE
-  "highlight SpecialKey ctermfg=236
-  colorscheme iceberg
-catch
-endtry
+colorscheme iceberg
 
 
 "" settings
@@ -101,18 +80,13 @@ noremap <C-h> :bp<CR>
 noremap <C-l> :bn<CR>
 noremap j gj
 noremap k gk
-noremap m %
+
+noremap <C-e> :Vaffle<CR>
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
 
-"" ale.vim
-let g:ale_linters = {
-      \   'html': [],
-      \}
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "" ============================================================================
 ""
@@ -120,10 +94,11 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 ""
 "" ============================================================================
 
-let &statusline  = '%6*%{exists("*ObsessionStatus")?ObsessionStatus(StatuslineProject(), StatuslineProject() . " (paused)"):""}'
+let &statusline  = ''
+let &statusline .= '%6*%{exists("*ObsessionStatus")?ObsessionStatus(StatuslineProject(), StatuslineProject() . " (paused)"):""}'
 let &statusline .= '%#StatusLineNC#%{exists("*ObsessionStatus")?ObsessionStatus("", "", StatuslineProject()):StatuslineProject()}'
 let &statusline .= "%#StatusLineNC#%{StatuslineGit()}%*"
-let &statusline .= "%* %f "
+let &statusline .= "%* %n %f "
 let &statusline .= '%1*%{&modified && !&readonly?"\*":""}%*'
 let &statusline .= '%1*%{&modified && &readonly?"\*":""}%*'
 let &statusline .= '%2*%{&modifiable?"":"\*"}%*'

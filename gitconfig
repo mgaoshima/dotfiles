@@ -2,7 +2,7 @@
 	name = Nozomi Oshima
 	email = nozomi.oshima@gmail.com
 [core]
-	pager = less -R -S
+	pager = less -R 
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	whitespace = cr-at-eol
