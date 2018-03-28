@@ -4,7 +4,10 @@ alias ga="git add -A; gs"
 alias tarc="tar zcvf"
 alias tarx="tar zxvf"
 alias rsync="rsync -zh --exclude-from=$HOME/.rsync_excludes"
-alias diffcomp="git diff --exit-code --cached --name-only --diff-filter=ACM -- '*.png' '*.jpg' | imageoptim"
+#alias diffcomp="git diff --relative --exit-code --cached --name-only --diff-filter=ACM -- '*.png' '*.jpg' | imageoptim"
+alias diffcomp_imagealpha="git diff --relative --exit-code --cached --name-only --diff-filter=ACM -- '*.png' | xargs pngquant --force --ext .png"
+alias diffcomp_imageoptim="git diff --relative --exit-code --cached --name-only --diff-filter=ACM -- '*.png' '*.jpg' | imageoptim"
+alias diffcomp="diffcomp_imagealpha; diffcomp_imageoptim"
 
 # Golang
 set -x GOPATH $HOME/Workspace
