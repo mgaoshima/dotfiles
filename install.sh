@@ -15,9 +15,9 @@ fi
 
 brew install \
   ack \
-  android-platform-tools \
   cmake \
   fish \
+  fzf \
   ghq \
   git \
   go \
