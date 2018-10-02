@@ -73,12 +73,12 @@ mkdir -p ~/Workspace/pkg
 mkdir -p ~/Workspace/src
 
 # dotfiles repo
-DOTFILES_DIR=~/Workspace/src/github.com/mgaoshima/dotfiles
-DOTFILES_REPO=git@github.com:mgaoshima/dotfiles.git
+DOTFILES_DIR=~/Workspace/src/github.com/nzmosh/dotfiles
+DOTFILES_REPO=git@github.com:nzmosh/dotfiles.git
 if [ -e $DOTFILES_DIR ]; then
-  echo "mgaoshima/dotfiles already cloned."
+  echo "nzmosh/dotfiles already cloned."
 else
-  echo "Cloning mgaoshima/dotfiles..."
+  echo "Cloning nzmosh/dotfiles..."
   git clone $DOTFILES_REPO $DOTFILES_DIR
 fi
 cd $DOTFILES_DIR
