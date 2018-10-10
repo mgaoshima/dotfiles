@@ -7,9 +7,9 @@ call plug#begin()
   Plug 'banyan/recognize_charcode.vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mattn/emmet-vim'
-  Plug 'pgdouyon/vim-evanesco'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'cocopon/vaffle.vim'
+  "Plug 'pgdouyon/vim-evanesco'
+  "Plug 'editorconfig/editorconfig-vim'
+  "Plug 'cocopon/vaffle.vim'
 
   " git -------------------------
   Plug 'tpope/vim-fugitive'
@@ -18,19 +18,25 @@ call plug#begin()
   " syntax ----------------------
   Plug 'othree/html5.vim'
   Plug 'hail2u/vim-css3-syntax'
-  Plug 'jason0x43/vim-js-indent'
-  Plug 'StanAngeloff/php.vim'
-  Plug 'digitaltoad/vim-pug'
+  "Plug 'jason0x43/vim-js-indent'
+  "Plug 'StanAngeloff/php.vim', { 'for': ['php'] }
+  "Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
+  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
 
   " colorscheme -----------------
-  Plug 'cocopon/iceberg.vim'
+  "Plug 'cocopon/iceberg.vim'
+  Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
 filetype plugin indent on
 syntax enable
 
-colorscheme iceberg
+colorscheme nord
+let g:nord_cursor_line_number_background = 1
 
 
 "" settings
@@ -80,8 +86,6 @@ noremap <C-h> :bp<CR>
 noremap <C-l> :bn<CR>
 noremap j gj
 noremap k gk
-
-noremap <C-e> :Vaffle<CR>
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
