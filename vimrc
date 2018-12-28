@@ -21,13 +21,13 @@ call plug#begin()
   "Plug 'jason0x43/vim-js-indent'
   "Plug 'StanAngeloff/php.vim', { 'for': ['php'] }
   "Plug 'digitaltoad/vim-pug', { 'for': ['pug'] }
-  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
+  Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx', 'html'] }
   Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
   Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
 
   " colorscheme -----------------
-  "Plug 'cocopon/iceberg.vim'
+  Plug 'cocopon/iceberg.vim'
   Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
@@ -36,13 +36,15 @@ filetype plugin indent on
 syntax enable
 
 colorscheme nord
+let g:nord_comment_brightness = 20
 let g:nord_cursor_line_number_background = 1
-
+"colorscheme iceberg
 
 "" settings
 set title
 set hidden
 set confirm
+set noeol
 set nofixeol
 set directory=/tmp
 set backupdir=/tmp
@@ -51,7 +53,7 @@ set mouse=a
 set backspace=indent,eol,start
 set number
 set ruler
-set cursorline
+set nocursorline
 set laststatus=2
 set nowrap
 set ignorecase
@@ -86,11 +88,13 @@ noremap <C-h> :bp<CR>
 noremap <C-l> :bn<CR>
 noremap j gj
 noremap k gk
+noremap @sp o@include sp {<CR>}<ESC>O
+
+noremap "" :s;<;\&lt\;;<cr>gv:s;>;\&gt\;;<cr>gv:s;";\&quot\;;<cr>:noh<cr>
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|build|dist|wp-admin|wp-include|vendors)|\.(git|hg|svn|DS_Store)$'
-
 
 "" ============================================================================
 ""
