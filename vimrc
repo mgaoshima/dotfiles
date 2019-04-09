@@ -35,10 +35,10 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-colorscheme nord
-let g:nord_comment_brightness = 20
-let g:nord_cursor_line_number_background = 1
-"colorscheme iceberg
+"colorscheme nord
+"let g:nord_comment_brightness = 20
+"let g:nord_cursor_line_number_background = 1
+colorscheme iceberg
 
 "" settings
 set title
@@ -89,6 +89,7 @@ noremap <C-l> :bn<CR>
 noremap j gj
 noremap k gk
 noremap @sp o@include sp {<CR>}<ESC>O
+noremap @pc o@include pc {<CR>}<ESC>O
 
 noremap "" :s;<;\&lt\;;<cr>gv:s;>;\&gt\;;<cr>gv:s;";\&quot\;;<cr>:noh<cr>
 
