@@ -1,4 +1,5 @@
 # Alias
+alias gti="git"
 alias gs="git status -s"
 alias ga="git add -A; gs"
 alias tarc="tar zcvf"

@@ -30,8 +30,9 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-colorscheme nord
 "colorscheme iceberg
+colorscheme nord
+hi Visual term=reverse cterm=reverse guibg=Grey
 
 "" settings
 set title hidden confirm noeol nofixeol directory=/tmp backupdir=/tmp history=200
@@ -43,8 +44,11 @@ set wildmode=list:longest,full
 set wildignore=*/tmp/*,*.so,*.swp,*.bak,*.min.*,*.map,*.jpg,*.png,*.gif
 set laststatus=2 pumheight=10
 set nrformats=
+set cursorline
 
 autocmd BufRead * set ambiwidth=single
+
+autocmd BufNewFile,BufRead *.inc  set filetype=html
 
 "" Auto Complete - http://io-fia.blogspot.jp/2012/11/vimvimrc.html
 set completeopt=menuone
@@ -60,6 +64,9 @@ noremap j gj
 noremap k gk
 noremap @sp o@include sp {<CR>}<ESC>O
 noremap @pc o@include pc {<CR>}<ESC>O
+""vmap dv2 ygvs<C-r>=<C-r>0/2<ESC><ESC>
+
+noremap @blank i<span class="icon-blank" aria-label="新しいタブで開きます"></span><esc>
 
 "" ctrlp.vim
 let g:ctrlp_show_hidden = 1
